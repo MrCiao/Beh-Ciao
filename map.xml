@@ -1,27 +1,23 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
 <name>Antiquated</name>
-<version>1.2.1</version>
-<objective>Destroy Both Enemy Monuments In Their Entirety.</objective>
+<version>1.0.0</version>
+<objective>Capture Both Flags From Either Side!</objective>
 <authors>
-    <author>Matig</author>
+    <author>G3O</author>
 </authors>
-<contributors>
-    <contributor contribution="Aesthetics">Thieved</contributor>
-    <contributor contribution="Is Thieved :P">Niftie</contributor>
-</contributors>
 <rules>
-    <rule>No Chaos Cannons!</rule>
+    <rule>Standard OCN Rules!</rule>
 </rules>
 <teams>
-   <team color="purple" max="18" max-overfill="24">Purple Team</team>
-   <team color="yellow" max="18" max-overfill="24">Yellow Team</team>
+   <team color="green" max="18" max-overfill="24">Ribelle</team>
+   <team color="red" max="18" max-overfill="24">Conquestastori</team>
 </teams>
 <spawns>
-    <spawn team="yellow" kit="yellow" safe="true">
+    <spawn team="green" kit="green" safe="true">
         <cuboid min="7,2,80" max="2,2,75"/>
     </spawn>
-    <spawn team="purple" kit="purple" safe="true">
+    <spawn team="red" kit="red" safe="true">
         <cuboid min="2,2,-69" max="7,2,-64"/>
     </spawn>
     <default yaw="90">
@@ -46,38 +42,19 @@
         <item slot="9" amount="64">arrow</item>
         <item slot="17" amount="1" lore="`6Right Click To Defuse TNT!|`4Does Not Work In Water! name="`6TNT Defusers>shear</item>
     </kit>
-    <kit name="purple" parents="spawn">
+    <kit name="red" parents="spawn">
         <helmet color="7F3FB2">leather helmet</helmet>
         <boots color="7F3FB2">leather boots</boots>
         <item slot="4" damage="10">stained clay</item>
         <item slot="31" damage="10">stained glass</item>
     </kit>
-    <kit name="yellow" parents="spawn">
+    <kit name="green" parents="spawn">
         <helmet color="0E5E533">leather helmet</helmet>
         <boots color="0E5E533">leather helmet</helmet>
         <item slot="4" damage="4">stained clay</item>
         <item slot="31" damage="4">stained glass</item>
     </kit>
 </kits>
-<destroyables name="Monument A" materials="obsidian" completion="100%" mode-changes="true" show=progress="true" repairable="false">
-    <destroyable owner="purple">
-       <cuboid min="14,36,-77" max="16,38,-75"/>
-    </destroyable>
-    <destroyable owner="yellow">
-       <cuboid min="-38,36,88" max="-40,38,90"/>
-    </destroyable>
-</destroyables>
-<destroyables name="Monument B" materials="obsidian" completion="100%" mode-changes="true">
-    <destroyable owner="purple">
-       <cuboid min="-38,35,-75" max="-40,37,-77"/>
-    </destroyable>
-    <destroyable owner="yellow">
-       <cuboid min="14,35,88" max="16,37,90"/>
-    </destroyable>
-</destroyables>
-<modes>
-    <mode after="5m" material="coal block"/>
-</modes>
 <filters>
     <filter name="only-yellow">
         <team>yellow</team>
